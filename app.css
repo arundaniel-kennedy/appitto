@@ -4,14 +4,18 @@
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Expletus Sans', cursive;
 font-family: 'Racing Sans One', cursive;
+pixelblue=#5e97f6
 */
+html{
+	
+}
 
 h1{
     font-size: 5rem;
     font-family: 'Expletus Sans', cursive;
     color:white;
     padding-top: 11vh;
-    padding-bottom: 11vh;
+
 }
 
 h3{
@@ -20,13 +24,40 @@ h3{
     color: black;
 }
 
+h4{
+  font-family: 'Expletus Sans', cursive;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.card{
+    border-radius: 30px;
+}
+
 .hovering:hover{
   box-shadow: 0px 0px 15px grey;
 }
 
-.section1{
+
+#gred{
+  color:#db3236;
+}
+#ggreen{
+  color:#3cba54;
+}
+
+#gyellow{
+  color:#f4c20d;
+}
+
+#gblue{
+  color:#4885ed;
+}
+
+#header{
   height:40vh;
   width: 100%;
-  background-color: black;
+  background-color: #5e97f6;
   margin: 0px;
+  overflow-y: hidden;
 }
