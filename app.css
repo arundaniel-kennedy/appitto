@@ -7,7 +7,7 @@ font-family: 'Racing Sans One', cursive;
 pixelblue=#5e97f6
 */
 html{
-	
+
 }
 
 h1{
@@ -38,7 +38,6 @@ h4{
   box-shadow: 0px 0px 15px grey;
 }
 
-
 #gred{
   color:#db3236;
 }
@@ -59,5 +58,5 @@ h4{
   width: 100%;
   background-color: #5e97f6;
   margin: 0px;
-  overflow-y: hidden;
+  
 }
