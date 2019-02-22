@@ -1,0 +1,56 @@
+var scrollCount=1;
+
+window.addEventListener('mousewheel', function(e){
+
+  if(e.wheelDelta>0 && scrollCount<4){
+  scrollCount++;
+  }
+
+  else if(e.wheelDelta<0 && scrollCount>1){
+  scrollCount--;
+  }
+
+  s=scrollCount;
+
+  if (s==1) {
+    document.getElementById('rom').style.display="block";
+    document.getElementById('roms1').style.display="block";
+    document.getElementById('review').style.display="none";
+    document.getElementById('reviews1').style.display="none";
+    document.getElementById('apps').style.display="none";
+    document.getElementById('apps1').style.display="none";
+    document.getElementById('about').style.display="none";
+    document.getElementById('about1').style.display="none";
+    //colorchange();
+  }else if(s==2){
+    document.getElementById('rom').style.display="none";
+    document.getElementById('roms1').style.display="none";
+    document.getElementById('review').style.display="block";
+    document.getElementById('reviews1').style.display="block";
+    document.getElementById('apps').style.display="none";
+    document.getElementById('apps1').style.display="none";
+    document.getElementById('about').style.display="none";
+    document.getElementById('about1').style.display="none";
+    //colorchange();
+  }else if (s==3) {
+    document.getElementById('rom').style.display="none";
+    document.getElementById('roms1').style.display="none";
+    document.getElementById('review').style.display="none";
+    document.getElementById('reviews1').style.display="none";
+    document.getElementById('apps').style.display="block";
+    document.getElementById('apps1').style.display="block";
+    document.getElementById('about').style.display="none";
+    document.getElementById('about1').style.display="none";
+    //colorchange();
+  }else if (s==4) {
+    document.getElementById('rom').style.display="none";
+    document.getElementById('roms1').style.display="none";
+    document.getElementById('review').style.display="none";
+    document.getElementById('reviews1').style.display="none";
+    document.getElementById('apps').style.display="none";
+    document.getElementById('apps1').style.display="none";
+    document.getElementById('about').style.display="block";
+    document.getElementById('about1').style.display="block";
+    //colorchange();
+  }
+});

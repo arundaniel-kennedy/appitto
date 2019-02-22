@@ -5,95 +5,392 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Appitto</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+    (function ($) {
+    $(document).ready(function(){
+      $(".navbar").hide();
+      $(function () {
+        $(window).scroll(function () {
+                // set distance user needs to scroll before we fadeIn navbar
+          if ($(this).scrollTop() >310) {
+            $('.navbar').show();//fadeIn();
+          } else {
+            $('.navbar').hide();//fadeOut();
+          }
+        });
+      });
+     });
+    }(jQuery));
+
+      function colorchange(){
+        var min=1;
+        var max=5;
+        var h = Math.floor(Math.random() * (+max - +min)) + +min;
+
+        var red="#db4437";
+        var blue="#4285f4";
+        var yellow="#f4b400";
+        var green="#0f9d58";
+
+
+        if(h==1){
+          document.getElementById('header').style.backgroundColor=red;
+          document.getElementById('navbar').style.backgroundColor=red;
+          document.getElementById('mheader').style.backgroundColor=red;
+          document.getElementById('dots1').style.color=green;
+          document.getElementById('dots2').style.color=yellow;
+          document.getElementById('dots3').style.color=green;
+          document.getElementById('dots4').style.color=yellow;
+          document.getElementById('one').style.backgroundColor=blue;
+          document.getElementById('two').style.backgroundColor=green;
+          document.getElementById('three').style.backgroundColor=yellow;
+          document.getElementById('four').style.backgroundColor=red;
+          document.getElementById('five').style.backgroundColor=red;
+          document.getElementById('mone').style.backgroundColor=blue;
+          document.getElementById('mtwo').style.backgroundColor=green;
+          document.getElementById('mthree').style.backgroundColor=yellow;
+          document.getElementById('mfour').style.backgroundColor=red;
+          sessionStorage.setItem("one",blue);//blue
+          sessionStorage.setItem("two",green);
+          sessionStorage.setItem("three",yellow);
+          sessionStorage.setItem("four",red);
+
+        }else if(h==2){
+          document.getElementById('header').style.backgroundColor=blue;
+          document.getElementById('navbar').style.backgroundColor=blue;
+          document.getElementById('mheader').style.backgroundColor=blue;
+          document.getElementById('dots1').style.color=green;
+          document.getElementById('dots3').style.color=red;
+          document.getElementById('dots4').style.color=green;
+          document.getElementById('dots2').style.color=red;
+          document.getElementById('one').style.backgroundColor=red;
+          document.getElementById('two').style.backgroundColor=green;
+          document.getElementById('three').style.backgroundColor=yellow;
+          document.getElementById('four').style.backgroundColor=blue;
+          document.getElementById('five').style.backgroundColor=blue;
+          document.getElementById('mone').style.backgroundColor=red;
+          document.getElementById('mtwo').style.backgroundColor=green;
+          document.getElementById('mthree').style.backgroundColor=yellow;
+          document.getElementById('mfour').style.backgroundColor=blue;
+          sessionStorage.setItem("one",red);//blue
+          sessionStorage.setItem("two",green);
+          sessionStorage.setItem("three",yellow);
+          sessionStorage.setItem("four",blue);
+        }else if(h==3){
+          document.getElementById('header').style.backgroundColor=green;
+          document.getElementById('navbar').style.backgroundColor=green;
+          document.getElementById('mheader').style.backgroundColor=green;
+          document.getElementById('dots1').style.color=blue;
+          document.getElementById('dots2').style.color=red;
+          document.getElementById('dots3').style.color=blue;
+          document.getElementById('dots4').style.color=red;
+          document.getElementById('one').style.backgroundColor=yellow;
+          document.getElementById('two').style.backgroundColor=blue;
+          document.getElementById('three').style.backgroundColor=red;
+          document.getElementById('four').style.backgroundColor=green;
+          document.getElementById('five').style.backgroundColor=green;
+          document.getElementById('mone').style.backgroundColor=yellow;
+          document.getElementById('mtwo').style.backgroundColor=blue;
+          document.getElementById('mthree').style.backgroundColor=red;
+          document.getElementById('mfour').style.backgroundColor=green;
+          sessionStorage.setItem("one",yellow);//blue
+          sessionStorage.setItem("two",blue);
+          sessionStorage.setItem("three",red);
+          sessionStorage.setItem("four",green);
+
+        }else if(h==4){
+          document.getElementById('header').style.backgroundColor=yellow;
+          document.getElementById('navbar').style.backgroundColor=yellow;
+          document.getElementById('mheader').style.backgroundColor=blue;
+          document.getElementById('dots1').style.color=blue;
+          document.getElementById('dots2').style.color=green;
+          document.getElementById('dots3').style.color=blue;
+          document.getElementById('dots4').style.color=green;
+          document.getElementById('one').style.backgroundColor=blue;
+          document.getElementById('two').style.backgroundColor=green;
+          document.getElementById('three').style.backgroundColor=red;
+          document.getElementById('four').style.backgroundColor=yellow;
+          document.getElementById('five').style.backgroundColor=yellow;
+          document.getElementById('mone').style.backgroundColor=blue;
+          document.getElementById('mtwo').style.backgroundColor=green;
+          document.getElementById('mthree').style.backgroundColor=red;
+          document.getElementById('mfour').style.backgroundColor=yellow;
+          sessionStorage.setItem("one",blue);//blue
+          sessionStorage.setItem("two",green);
+          sessionStorage.setItem("three",red);
+          sessionStorage.setItem("four",yellow);
+        }
+      }
+
+    </script>
 
   </head>
-  <body onload="timechange();">
+  <body onload="colorchange();">
 
-    <div id="header" class="sticky-top">
-      <center>
-        <h1>APPITTO<br />
-          <h4>
-            <span id="gred">●</span>
-            READ
-            <span id="gblue">●</span>
-            INSTALL
-            <span id="gyellow">●</span>
-            FLASH
-            <span id="ggreen">●</span>
-          </h4>
-        </h1>
-      </center>
-    </div>
-<br><br>
-    <div class="container-fluid">
+    <div class="d-none d-md-block">
+      <nav class="navbar fixed-top text-center" id="navbar" role="navigation" style="color:white">
 
-        <div id="about">
-          <a href="about.html">
-            <div class="card hovering m-auto">
-              <div class="card-body">
-                <h3 class="card-title">ABOUT</h3>
-                This is some text within a card body.
-                <h1 id="about1" style="">ABOUT</h1>
+        <span class="navbar-brand mb-0 h1">
+          <h3 style="color:white;font-size:2.5rem;">APPITTO</h3>
+        </span>
+
+        <h4>
+
+          READ
+          <span id="dots3" >●</span>
+          INSTALL
+          <span id="dots4" >●</span>
+          FLASH
+
+        </h4>
+
+        <div class="float-right align-right pr-2">
+          <h2>
+
+            <a href="#" target="_blank" style="color:white">
+              <span class="fab fa-facebook-square"></span>
+            </a>
+            <a href="#" target="_blank" style="color:white">
+              <span class="fab fa-twitter"></span>
+            </a>
+            <a href="#" target="_blank" style="color:white">
+              <span class="fab fa-instagram"></span>
+            </a>
+            <a href="#" target="_blank" style="color:white">
+              <span class="fas fa-envelope"></span>
+            </a>
+
+          </h2>
+        </div>
+      </nav>
+
+      <a onclick="colorchange();">
+        <div id="header" class="noselect">
+          <center><br><br>
+            <h1><span>APPITTO</span><br />
+              <h4>
+
+                READ
+                <span id="dots1" >●</span>
+                INSTALL
+                <span id="dots2" >●</span>
+                FLASH
+
+              </h4>
+            </h1>
+          </center><br />
+          <div class="float-right align-right pr-4">
+            <h2>
+
+              <a href="#" target="_blank" style="color:white">
+                <span class="fab fa-facebook-square"></span>
+              </a>
+              <a href="#" target="_blank" style="color:white">
+                <span class="fab fa-twitter"></span>
+              </a>
+              <a href="#" target="_blank" style="color:white">
+                <span class="fab fa-instagram"></span>
+              </a>
+              <a href="#" target="_blank" style="color:white">
+                <span class="fas fa-envelope"></span>
+              </a>
+
+            </h2>
+          </div>
+        </div>
+      </a>
+
+      <div id="content">
+
+        <div class="row pl-3 pb-3" style="margin-right:0px" id="one">
+          <div class="col-lg-10 pt-3">
+            <a href="review/index.html">
+              <div class="card hovering"  id="review">
+                <div class="card-body">
+                  <h3 class="card-title">Review</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
               </div>
+            </a>
+          </div>
+          <div class="col-lg-2 pt-3">
+            <div id="roms1">
+              READ
             </div>
-          </a>
+          </div>
         </div>
 
-<br><br>
-
-      <div id="reviews">
-        <a href="review.html">
-          <div class="card hovering m-auto">
-            <div class="card-body">
-              <h3 class="card-title">REVIEWS</h3>
-              This is some text within a card body.
-              <h1 id="reviews1" style="">REVIEWS</h1>
+        <div class="row pl-3 pb-3" style="margin-right:0px" id="two">
+          <div class="col-lg-10 pt-3">
+            <a href="app/index.html">
+              <div class="card hovering"  id="apps">
+                <div class="card-body">
+                  <h3 class="card-title">Apps</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-2" style="margin-top:-55px;">
+            <div id="roms1">
+              INSTALL
             </div>
           </div>
-        </a>
+        </div>
+
+        <div class="row pl-3 pb-3" style="margin-right:0px" id="three">
+          <div class="col-lg-10 pt-3">
+            <a href="rom/index.html">
+              <div class="card hovering" id="rom">
+                <div class="card-body">
+                  <h3 class="card-title">Rom</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-2 pt-2">
+            <div id="roms1">
+              FLASH
+            </div>
+          </div>
+        </div>
+
+        <div class="row pl-3 pb-3" style="margin-right:0px" id="four">
+          <div class="col-lg-10 pt-3">
+            <a href="about/about.html">
+              <div class="card hovering" id="about">
+                <div class="card-body">
+                  <h3 class="card-title">About</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-2">
+            <div id="roms1">
+              KNOW
+            </div>
+          </div>
+        </div>
+
+        <div class="row pl-3 pb-3" style="margin-right:0px" id="five">
+          <div class="col-10">
+            <center class="copy"><br />
+              ⓒCopyRight Reserved. Appitto inc.
+            </center>
+          </div>
+          <div class="col-2">
+            <center>&nbsp; &nbsp; &nbsp;
+              <a href="#header" style="color:white;"><span class="fas fa-angle-up" style="font-size:10vh;color:white;border-radius:100px;"></span></a>
+            &nbsp; &nbsp; &nbsp;</center>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+    <div class="d-block d-md-none">
+
+      <div id="mheader" class="pad">
+        <center>
+          <h1>APPITO</h1>
+          <h4>
+
+            READ
+            <span id="dots1" >●</span>
+            INSTALL
+            <span id="dots2" >●</span>
+            FLASH
+
+          </h4>
+        </center>
+
+        <div class="pad1">
+          <a href="#mcontent">
+            <center>
+              <span class="fas fa-angle-up"></span>
+            </center>
+          </a>
+        </div>
       </div>
+      <div id="mcontent">
+        <div class="row pl-2">
 
-<br><br>
-
-      <div id="roms">
-        <a href="rom.html">
-          <div class="card hovering m-auto">
-            <div class="card-body">
-              <h3 class="card-title">ROMS</h3>
-              This is some text within a card body.
-              <h1 id="roms1" style="">ROMS</h1>
-            </div>
+          <div class="col pt-2 pb-2" id="mone">
+            <a href="review/index.html">
+              <div class="card hovering"  id="review" style="width:92vw;">
+                <div class="card-body">
+                  <h3 class="card-title">Review</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-
-<br><br>
-
-      <div id="apps">
-        <a href="app.html">
-          <div class="card hovering m-auto">
-            <div class="card-body">
-              <h3 class="card-title">APPS</h3>
-              This is some text within a card body.
-              <h1 id="apps1" style="">APPS</h1>
-            </div>
+          <div class="col pt-2 pb-2" id="mtwo">
+            <a href="app/index.html">
+              <div class="card hovering"  id="apps" style="width:92vw;">
+                <div class="card-body">
+                  <h3 class="card-title">Apps</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
+          <div class="col pt-2 pb-2" id="mthree">
+            <a href="rom/index.html">
+              <div class="card hovering" id="rom" style="width:92vw;">
+                <div class="card-body">
+                  <h3 class="card-title">Rom</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col pt-2 pb-5" id="mfour">
+            <a href="about/about.html">
+              <div class="card hovering" id="about" style="width:92vw;">
+                <div class="card-body">
+                  <h3 class="card-title">About</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </a><br>
+            <center class="copy text-center">
+              ⓒCopyRight Reserved. Appitto inc.
+            </center>
+          </div>
+
+        </div>
       </div>
 
     </div>
-<br><br>
-    <div id="footer">
-      <center>
-        ©Copyright 2018. An AGS company product.
-      </center>
-    </div>
 
 
-
-  <script src="app.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

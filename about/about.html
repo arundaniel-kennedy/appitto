@@ -1,0 +1,338 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>About Us</title>
+
+    <script>
+      //alert(sessionStorage.getItem("store"));
+
+      var myvar;
+      col = ["#db4437","#4285f4","#f4b400","#0f9d58"]//red,blue,yellow,green
+      function changecolor(){
+        var min=1;
+        var max=5;
+        var h1 = Math.floor(Math.random() * (+max - +min)) + +min;
+
+        document.getElementById('header').style.backgroundColor=col[h1-1];
+        sessionStorage.setItem("names",h1);
+      }
+
+      function myfun() {
+        myvar = setInterval(changecolor, 2500);
+      }
+
+      function hidestate() {
+        document.getElementById('jb').style.display="none";
+        document.getElementById('ad').style.display="none";
+        document.getElementById('hs').style.display="none";
+        document.getElementById('gp').style.display="none";
+      }
+
+      function show(s) {
+        if (s==1) {
+          document.getElementById('jb').style.display="block";
+          document.getElementById('ad').style.display="none";
+          document.getElementById('hs').style.display="none";
+          document.getElementById('gp').style.display="none";
+          color = sessionStorage.getItem("names");
+          document.getElementById('jb1').style.backgroundColor=col[color-1];
+        }else if(s==2){
+          document.getElementById('ad').style.display="block";
+          document.getElementById('jb').style.display="none";
+          document.getElementById('hs').style.display="none";
+          document.getElementById('gp').style.display="none";
+          color = sessionStorage.getItem("names");
+          document.getElementById('ad1').style.backgroundColor=col[color-1];
+        }else if (s==3) {
+          document.getElementById('hs').style.display="block";
+          document.getElementById('jb').style.display="none";
+          document.getElementById('ad').style.display="none";
+          document.getElementById('gp').style.display="none";
+          color = sessionStorage.getItem("names");
+          document.getElementById('hs1').style.backgroundColor=col[color-1];
+        }else if (s==4) {
+          document.getElementById('gp').style.display="block";
+          document.getElementById('hs').style.display="none";
+          document.getElementById('ad').style.display="none";
+          document.getElementById('jb').style.display="none";
+          color = sessionStorage.getItem("names");
+          document.getElementById('gp1').style.backgroundColor=col[color-1];
+        }
+      }
+
+      function rando(){
+        document.getElementById('about').style.color=sessionStorage.getItem("four");
+        changecolor();
+        hidestate();
+        myfun();
+        }
+
+    </script>
+
+  </head>
+  <body onload="rando();">
+
+    <div id="about">
+      <a class="btn btn-outline-primary mt-2 ml-2" href="../index.html">BACK</a>
+      <center><br>
+        <h5>About Us</h5>
+      </center>
+    </div>
+
+    <div id="header">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2500">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="1">
+            <center><br><br><br>
+              <a href="#jb" onclick="show(1);"><h1>Balaji Jeeva</h1></a>
+              <pre><h4>DEVELOP                DEBUG                EXECUTE</h4></pre>
+            </center>
+          </div>
+          <div class="carousel-item " id="2">
+            <center><br><br><br>
+              <a href="#ad" onclick="show(2);"><h1>Arun Daniel K</h1></a>
+              <pre><h4>EAT                  GAME                CODE</h4></pre>
+            </center>
+          </div>
+          <div class="carousel-item " id="3">
+            <center><br><br><br>
+              <a href="#hs" onclick="show(3);"><h1>Harish Sandesh S</h1></a>
+              <pre><h4>DESIGN               XXXX                XXXX</h4></pre>
+            </center>
+          </div>
+          <div class="carousel-item " id="4">
+            <center><br><br><br>
+              <a href="#gp" onclick="show(4);"><h1>Ganesh Prabhu V</h1></a>
+              <pre><h4>GAME                SLEEP                 NEVER EAT</h4></pre>
+            </center>
+          </div>
+
+        </div>
+        <br><br><br>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" onclick="changecolor();">
+          <span class="fas fa-angle-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" onclick="changecolor();">
+          <span class="fas fa-angle-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="" id="jb" >
+      <div class="content" id="jb1">
+        <center><br><br><br>
+          <h1>Balaji Jeeva</h1>
+        </center>
+      </div>
+      <div class="container-fluid pt-5 pb-3">
+
+        <div class="jumbotron">
+          <h3>Me Personally</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>My Role in Appitto</h3><br><br><br>
+          My role is create the Backend structure of applications.
+        </div>
+        <div class="jumbotron">
+          <h3>My Favorites</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>My Skills</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>The extras</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>Reach Me Out....</h3><br><br><br>
+
+          <center>
+            <p style="font-size:3rem">
+
+              <a href="https://www.facebook.com/AB2809" target="_blank" style="color:black">
+                <span class="fab fa-facebook-square"></span>
+              </a>
+              <a href="#" target="_blank" style="color:black">
+                <span class="fab fa-twitter"></span>
+              </a>
+              <a href="https://www.instagram.com/_balajiofficial_/" target="_blank" style="color:black">
+                <span class="fab fa-instagram"></span>
+              </a>
+              <a href="#" target="_blank" style="color:black">
+                <span class="fas fa-envelope" style="font-size:3rem"></span>
+              </a>
+            </p>
+          </center>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="" id="ad">
+      <div class="content" id="ad1">
+        <center><br><br><br>
+          <h1>Arun Daniel K</h1>
+        </center>
+      </div>
+      <div class="container-fluid pt-5 pb-3">
+
+        <div class="jumbotron">
+          <h3>Me Personally</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>My Role in Appitto</h3><br><br><br>
+          My role in appitto is to create websites like these.
+        </div>
+        <div class="jumbotron">
+          <h3>My Favorites</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>My Skills</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>The extras</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>Reach Me Out....</h3><br><br><br>
+
+          <center>
+            <h2 style="font-size:3rem">
+
+              <a href="https://www.facebook.com/arundanielk" target="_blank" style="color:black">
+                <span class="fab fa-facebook-square"></span>
+              </a>
+              <a href="https://twitter.com/arundanielk" target="_blank" style="color:black">
+                <span class="fab fa-twitter"></span>
+              </a>
+              <a href="https://www.instagram.com/arundanielk/" target="_blank" style="color:black">
+                <span class="fab fa-instagram"></span>
+              </a>
+              <a href="#" target="_blank" style="color:black">
+                <span class="fas fa-envelope" style="font-size:3rem"></span>
+              </a>
+          </center>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="" id="hs">
+      <div class="content" id="hs1">
+        <center><br><br><br>
+          <h1>Harish Sandesh S</h1>
+        </center>
+      </div>
+      <div class="container-fluid pt-5 pb-3">
+
+        <div class="jumbotron">
+          <h3>Me Personally</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>My Role in Appitto</h3><br><br><br>
+          My role is to create design IDEAS for each application.
+        </div>
+        <div class="jumbotron">
+          <h3>My Favorites</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>My Skills</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>The extras</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3>Reach Me Out....</h3><br><br><br>
+
+          <center>
+            <h2 style="font-size:3rem">
+
+              <a href="https://www.facebook.com/harishhurricane.sandesh" target="_blank" style="color:black">
+                <span class="fab fa-facebook-square"></span>
+              </a>
+              <a href="https://twitter.com/Harish__sandesh" target="_blank" style="color:black">
+                <span class="fab fa-twitter"></span>
+              </a>
+              <a href="https://www.instagram.com/_the__batman/" target="_blank" style="color:black">
+                <span class="fab fa-instagram"></span>
+              </a>
+              <a href="#" target="_blank" style="color:black">
+                <span class="fas fa-envelope" style="font-size:3rem"></span>
+              </a>
+          </center>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="" id="gp">
+      <div class="content" id="gp1">
+        <center><br><br><br>
+          <h1>Ganesh Prabhu V</h1>
+        </center>
+      </div>
+      <div class="container-fluid pt-5 pb-3">
+
+        <div class="jumbotron">
+          <h3 class="text-monospace">Me Personally</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3 class="text-monospace">My Role in Appitto</h3><br><br><br>
+          My role is to create Android applications.
+        </div>
+        <div class="jumbotron">
+          <h3 class="text-monospace">My Favorites</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3 class="text-monospace">My Skills</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3 class="text-monospace">The extras</h3><br><br><br>
+        </div>
+        <div class="jumbotron">
+          <h3 class="text-monospace">Reach Me Out....</h3><br><br><br>
+          <center>
+            <h2 style="font-size:3rem">
+
+              <a href="https://www.facebook.com/ganesh.prabhuvgp" target="_blank" style="color:black">
+                <span class="fab fa-facebook-square"></span>
+              </a>
+              <a href="https://twitter.com/ganesh_v_gp" target="_blank" style="color:black">
+                <span class="fab fa-twitter"></span>
+              </a>
+              <a href="https://www.instagram.com/ganesh_v_gp/" target="_blank" style="color:black">
+                <span class="fab fa-instagram"></span>
+              </a>
+              <a href="#" target="_blank" style="color:black;">
+                <span class="fas fa-envelope-open" style="font-size:3rem"></span>
+              </a>
+          </center>
+
+
+          </h2>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Expletus+Sans|Josefin+Sans|Racing+Sans+One');
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.btn-outline-primary{
+  font-weight: 900;
+  font-family: 'Josefin Sans', cursive;
+}
+
+h1{
+
+  font-size: 8rem;
+  font-family: 'Expletus Sans', cursive;
+  color:white;
+}
+
+#header{
+  height:50vh !important;
+  width: 100vw;
+  margin: 0px;
+}
