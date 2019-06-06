@@ -120,7 +120,7 @@
       <div class="row">
 
         <div class="col-3 text-center hovering curve" onclick="location.href='phone.html';">
-          <img src="../static/companies/13.png" alt="" height="200" width="200">
+          <img src="../static/companies/13.png" alt="" height="250" width="250">
         </div>
         <div class="col-3 text-center mt-3 hovering curve" onclick="location.href='phone.html';"><br><br>
           <img src="../static/companies/14.png" alt="" height="80" width="200">
@@ -135,6 +135,19 @@
       </div>
 
     </div>
+
+    <!--div class="container mt-5">
+      <div class="row">
+        <?php
+          //for($i=1;$i<17;$i++){
+            #echo "<div class=\"col-3 text-center hovering curve mb-5\" onclick=\"location.href='phone.html';\">
+            #  <img src=\"../static/companies/".$i.".png\" height=\"200\" width=\"200\">
+            #</div>";
+          #}
+        ?>
+      </div>
+    </div-->
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
